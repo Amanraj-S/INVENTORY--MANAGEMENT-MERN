@@ -1,6 +1,5 @@
 import React from "react";
 import { Edit2, Trash2 } from "lucide-react";
-
 export default function ItemTable({ items, onEdit, onDelete }) {
   return (
     <div className="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">

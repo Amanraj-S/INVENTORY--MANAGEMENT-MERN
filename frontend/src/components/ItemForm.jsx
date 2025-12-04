@@ -1,6 +1,5 @@
 import React from "react";
 import { Plus } from "lucide-react";
-
 export default function ItemForm({
   formData,
   setFormData,
@@ -9,19 +8,12 @@ export default function ItemForm({
 }) {
   return (
     <div className="bg-white p-6 md:p-8 rounded-2xl shadow-md border border-gray-200 mb-12">
-
-      {/* Heading */}
       <h2 className="text-xl md:text-2xl font-bold text-indigo-700 mb-6 flex items-center gap-2">
         <Plus size={24} />
         {isEditing ? "Edit Item" : "Add New Item"}
       </h2>
-
-      {/* Form */}
       <form onSubmit={onSubmit} className="space-y-6">
-
-        {/* Row 1: Name + Quantity */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
           <div>
             <label className="text-sm font-medium text-gray-700">Item Name</label>
             <input
@@ -36,7 +28,6 @@ export default function ItemForm({
               required
             />
           </div>
-
           <div>
             <label className="text-sm font-medium text-gray-700">Quantity</label>
             <input
@@ -53,10 +44,7 @@ export default function ItemForm({
               min="0"
             />
           </div>
-
         </div>
-
-        {/* Row 2: Price full width */}
         <div className="w-full md:w-1/2">
           <label className="text-sm font-medium text-gray-700">Price</label>
           <input
@@ -73,8 +61,6 @@ export default function ItemForm({
             min="0"
           />
         </div>
-
-        {/* Button */}
         <div className="flex justify-end">
           <button
             type="submit"
@@ -85,7 +71,6 @@ export default function ItemForm({
             {isEditing ? "Update Item" : "Add Item"}
           </button>
         </div>
-
       </form>
     </div>
   );
